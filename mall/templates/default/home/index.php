@@ -92,7 +92,25 @@
 
 <!--今日主题优惠end-->
 
+<!--新品尝鲜-->
+<div class="sales-events wrapper">
+	<div class="lf lfnew"><?php echo $output['web_html']['index_test'];?></div>
+	<!-- <div class="rt"><div class="fastZT fastZT1">
+  <div class="hoverTab topbox">
+  <div class="tabCont">
+        <a target="_blank" href="javascript:void(0)" class="now">公告</a>
+        <a target="_blank" href="javascript:void(0)" class="">入驻</a>
+      </div>
+      <div style="display: block;" class="hoverCont "><ul class=" noticeList"> <?php if(!empty($output['show_article']['notice']['list']) && is_array($output['show_article']['notice']['list'])) { ?> <?php foreach($output['show_article']['notice']['list'] as $val) { ?><li><a rel="nofollow" href="<?php echo empty($val['article_url']) ? urlMember('article', 'show',array('article_id'=> $val['article_id'])):$val['article_url'] ;?>" target="_blank">【公告】<?php echo $val['article_title']; ?></a></li><?php }} ?></ul></div>
+      <div style="display: none;" class="hoverCont "><a href="<?php echo urlMall('show_joinin', 'index');?>" title="申请商家入驻；已提交申请，可查看当前审核状态。" class="store-join-btn" target="_blank">&nbsp;</a><a href="<?php echo urlMall('seller_login','show_login');?>" target="_blank" class="store-join-help"><i class="icon-cog"></i>登录商家管理中心</a></div>
+  </div>
+  <div class="topbox2">
+  <ul class="featuresList clearfix">
+  <li><a rel="nofollow" href="<?php echo urlMall('show_joinin', 'index');?>" target="_self"><i class="i_ico01"></i>招商入驻</a></li><li><a rel="nofollow" href="<?php echo urlMall('seller_login','show_login');?>" target="_self"><i class="i_ico02"></i>商家管理</a></li><li><a rel="nofollow" href="<?php echo urlmall('special','special_detail', array('special_id'=>'1'));?>" target="_self"><i class="i_ico03"></i>消费保障</a></li><li><a rel="nofollow" href="<?php echo urlMall('invite', 'index');?>" target="_self"><i class="i_ico04"></i>推广返利</a></li><li><a rel="nofollow" href="<?php echo DELIVERY_SITE_URL;?>" target="_self"><i class="i_ico05"></i>物流自提</a></li><li><a rel="nofollow" href="<?php echo WAP_SITE_URL;?>" target="_self"><i class="i_ico06"></i>手机专享</a></li></ul></div>
+      </div></div> -->
+</div>
 
+<!--新品尝鲜end-->
 
 <div class="wrapper">
   <div class="mt10">
@@ -104,51 +122,51 @@
 <!--StandardLayout End-->
 </div>
 <!--快捷导航-->
-<div id="nav_box"><ul><div class="m-logo"></div> 
-	    <?php if (is_array($output['lc_list']) && !empty($output['lc_list'])) {$i=0 ?>
+<!-- <div id="nav_box"><ul><div class="m-logo"></div> 
+      <?php if (is_array($output['lc_list']) && !empty($output['lc_list'])) {$i=0 ?>
     <?php foreach($output['lc_list'] as $v) { $i++?>
     <li class="nav_Sd_<?php echo $i;?> <?php if($i==1) echo 'hover'?>"> <a class="word" href="javascript:;"><em class="em"><?php echo $v['value']?></em><?php echo $v['name']?></a></li>
     <?php }} ?>
-	</ul></div>
-<!--快捷导航end-->
+  </ul></div>
+快捷导航end
 
-<!--限时特价随机--> 
+限时特价随机 
 <?php if(!empty($output['xianshi_item']) && is_array($output['xianshi_item'])) { ?>
-	<div class="wrapper partTit"><span><em class="ft31"><a href="<?php echo urlMall('promotion','list');?>" target="_blank"><i class="pink">限时</i>特价 </a></em><i class="eng">ON SALE</i></span></div>
+  <div class="wrapper partTit"><span><em class="ft31"><a href="<?php echo urlMall('promotion','list');?>" target="_blank"><i class="pink">限时</i>特价 </a></em><i class="eng">ON SALE</i></span></div>
 <div class="boxItem1_index wrapper zoom hoverTab">
     <ul style="display:block" class="hoverCont">
-    	<?php foreach($output['xianshi_item'] as $val) { ?>
+      <?php foreach($output['xianshi_item'] as $val) { ?>
                <li><div class="act-img-wrap"><a href="<?php echo urlMall('promotion','index',array('id'=>$val['xianshi_id']));?>" target="_blank"><img  width="688" height="190" src="<?php echo xsthumb($val['xianshi_image1']);?>" class="">
-    								</a>
-    								<div class="countdown-tag">
+                    </a>
+                    <div class="countdown-tag">
                                     <span class="tick-logo"></span>
                                     <p class="infoTit1 time-remain" count_down="<?php echo $val['end_time']-TIMESTAMP;?>"><i></i><em time_id="d">0</em>天<em time_id="h">0</em>时<em time_id="m">0</em>分<em time_id="s">0</em>秒</p>
                                         <span class="arrow-circle"></span>
-									</div>
-                				</div>
-                				<div class="act-detail-wrap">
-                					<div class="inner">
-    									<img width="150" height="35" src="<?php echo xsthumb($val['xianshi_image2']);?>" class="">
-                						<h3><a  href="<?php echo urlMall('promotion','index',array('id'=>$val['xianshi_id']));?>" target="_blank"><?php echo $val['xianshi_explain']; ?></a>
-    									</h3>
-                						<span class="discount">低至<?php echo $val['xianshi_discount']; ?>折</span>
-                					</div>
-                				</div>
-                			</li>
+                  </div>
+                        </div>
+                        <div class="act-detail-wrap">
+                          <div class="inner">
+                      <img width="150" height="35" src="<?php echo xsthumb($val['xianshi_image2']);?>" class="">
+                            <h3><a  href="<?php echo urlMall('promotion','index',array('id'=>$val['xianshi_id']));?>" target="_blank"><?php echo $val['xianshi_explain']; ?></a>
+                      </h3>
+                            <span class="discount">低至<?php echo $val['xianshi_discount']; ?>折</span>
+                          </div>
+                        </div>
+                      </li>
         <?php } ?>
             </ul>
-</div><?php } ?>
+</div><?php } ?> -->
 <!--限时特价随机end-->
-	<div class="wrapper partTit"><span><em class="ft31"><a href="<?php echo urlMall('promotion','list');?>" target="_blank"><i class="pink">晒单</i>促销 </a></em><i class="eng">INORDER TO SHARE SALE</i></span></div>	
-<div class="feiwa-new-tabcron wrapper">
+<!--   <div class="wrapper partTit"><span><em class="ft31"><a href="<?php echo urlMall('promotion','list');?>" target="_blank"><i class="pink">晒单</i>促销 </a></em><i class="eng">INORDER TO SHARE SALE</i></span></div>  
+<div class="feiwa-new-tabcron wrapper"> -->
 
-<!--晒单评价--><div class="bcon">
-		<!-- 代码开始 -->
-		<div class="list_lh">
+<!-- 晒单评价<div class="bcon">
+    代码开始
+    <div class="list_lh">
     <ul class="boxItem2 boxItem2-1 zoom" style="display:block">
-    	
+      
     <?php if(!empty($output['goods_evaluate_info']) && is_array($output['goods_evaluate_info'])){?>
-    	<?php foreach($output['goods_evaluate_info'] as $k=>$v){?>
+      <?php foreach($output['goods_evaluate_info'] as $k=>$v){?>
                 <li>
                         <a href="<?php echo urlMall('goods','comments_list',array('goods_id'=> $v['geval_goodsid']));?>" target="_blank">
                 <p class="infoImg feiwa-left"><img alt="" feiwa-url="<?php echo strpos($v['goods_pic'],'http')===0 ? $v['goods_pic']:UPLOAD_SITE_URL."/".ATTACH_GOODS."/".$v['geval_storeid']."/".$v['geval_goodsimage'];?>"   rel='lazy' src="<?php echo MALL_SITE_URL;?>/img/loading.gif" style="display: block;"></p>
@@ -162,69 +180,69 @@
                 </div>
             </a>
         </li>
-<?php }}?>	
+<?php }}?>  
  </ul>
-		</div>
-		<!-- 代码结束 -->
-	<script type="text/javascript">
+    </div>
+    代码结束
+  <script type="text/javascript">
 $(document).ready(function(){
-	$('.list_lh li:even').addClass('lieven');
+  $('.list_lh li:even').addClass('lieven');
 })
 $(function(){
-	$("div.list_lh").myScroll({
-		speed:40, //数值越大，速度越慢
-		rowHeight:100 //li的高度
-	});
+  $("div.list_lh").myScroll({
+    speed:40, //数值越大，速度越慢
+    rowHeight:100 //li的高度
+  });
 });
-</script></div><!--晒单评价end-->
-<!--右侧推荐店铺及推荐品牌-->
-	<!--品牌及店铺推荐-->
+</script></div>晒单评价end
+右侧推荐店铺及推荐品牌
+  品牌及店铺推荐
 <div class="boxItem4">
-	        <div class="focusImg focusImg1">
+          <div class="focusImg focusImg1">
             <div class="inner feiwa-new-slider">
-            	<ul>
-            		<li>    <div class="hotCont" style="display: block;">
+              <ul>
+                <li>    <div class="hotCont" style="display: block;">
         <a class="checkMore">换一换<i></i></a>
   <div class="feiwa-tab-zt">
-  	    	<?php if(!empty($output['special_list']) && is_array($output['special_list'])) {?>
-    		<?php foreach($output['special_list'] as $value) {?>
-  	<a href="<?php echo $value['special_link'];?>"><img  feiwa-url="<?php echo getREADSSpecialImageUrl($value['special_image']);?>" rel='lazy' src="<?php echo MALL_SITE_URL;?>/img/loading.gif" alt="<?php echo $value['special_title'];?>"><div class="item-text" ><?php echo $value['special_title'];?></div></a><?php }} ?>
+          <?php if(!empty($output['special_list']) && is_array($output['special_list'])) {?>
+        <?php foreach($output['special_list'] as $value) {?>
+    <a href="<?php echo $value['special_link'];?>"><img  feiwa-url="<?php echo getREADSSpecialImageUrl($value['special_image']);?>" rel='lazy' src="<?php echo MALL_SITE_URL;?>/img/loading.gif" alt="<?php echo $value['special_title'];?>"><div class="item-text" ><?php echo $value['special_title'];?></div></a><?php }} ?>
   </div>
         <div class="items docItem">
-        	<?php if(!empty($output['brand_r'])){$i = 0;?>
-        		<div class="showItem now" style="display:block;">
-        	<?php foreach($output['brand_r'] as $key=>$brand_r){ if ($i == 4){ echo '</div><div class="showItem">'; $i = 1;} else{ echo ' '; $i++; }?>
-        		
-        		 <a href="<?php echo urlMall('brand', 'list',array('brand'=>$brand_r['brand_id']));?>" target="_blank">
+          <?php if(!empty($output['brand_r'])){$i = 0;?>
+            <div class="showItem now" style="display:block;">
+          <?php foreach($output['brand_r'] as $key=>$brand_r){ if ($i == 4){ echo '</div><div class="showItem">'; $i = 1;} else{ echo ' '; $i++; }?>
+            
+             <a href="<?php echo urlMall('brand', 'list',array('brand'=>$brand_r['brand_id']));?>" target="_blank">
                     <p class="doc-img"><span><img feiwa-url="<?php echo brandImage($brand_r['brand_pic']);?>"  rel='lazy' src="<?php echo MALL_SITE_URL;?>/img/loading.gif" alt="<?php echo $brand_r['brand_name'];?>"></span><i></i></p>
                     <p class="doc-name"><?php echo $brand_r['brand_name'];?></p>
                </a>
-        			<?php }?></div> 
-        		<?php } ?>
+              <?php }?></div> 
+            <?php } ?>
                     </div>
        <div class="feiwa-tab-tg">
-       	
+         
      <?php if(!empty($output['group_list']) && is_array($output['group_list'])) { ?>
 <?php foreach($output['group_list'] as $val) { ?>
-       	<dl> <dt class="goods-name"><a target="_blank" href="<?php echo urlMall('show_groupbuy','groupbuy_detail',array('group_id'=> $val['groupbuy_id']));?>" title="<?php echo $val['groupbuy_name']; ?>">
-                                          	<?php echo $val['groupbuy_name']; ?></a></dt>
+         <dl> <dt class="goods-name"><a target="_blank" href="<?php echo urlMall('show_groupbuy','groupbuy_detail',array('group_id'=> $val['groupbuy_id']));?>" title="<?php echo $val['groupbuy_name']; ?>">
+                                            <?php echo $val['groupbuy_name']; ?></a></dt>
                                           <dd class="goods-thumb">
-                                          	<a target="_blank" href="<?php echo urlMall('show_groupbuy','groupbuy_detail',array('group_id'=> $val['groupbuy_id']));?>">
-                                          	<img alt="<?php echo $val['groupbuy_name']; ?>" feiwa-url="<?php echo gthumb($val['groupbuy_image1'], 'small');?>" rel='lazy' src="<?php echo MALL_SITE_URL;?>/img/loading.gif"  style="display: block;">
-                                          	</a></dd>
-                                          	<dd class="time-remain" count_down="<?php echo $val['end_time']-TIMESTAMP; ?>"><i></i><em time_id="d">0</em>天<em time_id="h">0</em>小时 <em time_id="m">0</em>分<em time_id="s">0</em>秒 </dd>
+                                            <a target="_blank" href="<?php echo urlMall('show_groupbuy','groupbuy_detail',array('group_id'=> $val['groupbuy_id']));?>">
+                                            <img alt="<?php echo $val['groupbuy_name']; ?>" feiwa-url="<?php echo gthumb($val['groupbuy_image1'], 'small');?>" rel='lazy' src="<?php echo MALL_SITE_URL;?>/img/loading.gif"  style="display: block;">
+                                            </a></dd>
+                                            <dd class="time-remain" count_down="<?php echo $val['end_time']-TIMESTAMP; ?>"><i></i><em time_id="d">0</em>天<em time_id="h">0</em>小时 <em time_id="m">0</em>分<em time_id="s">0</em>秒 </dd>
                                           <dd class="goods-price"><em><?php echo $val['groupbuy_price']; ?></em>
                                             <span class="original"><?php echo $val['goods_price']; ?></span></dd>
                                         </dl><?php } }?>
                                         </div>
 
     </div></li>
-            		<li>    <div class="hotCont" style="display: block;">
+                <li>    <div class="hotCont" style="display: block;">
         <a class="checkMore">换一换<i></i></a> 
         <div class="items  starShop">
                         <div class="showItem" style="display: block;">
 <?php if(!empty($output['store_list']) && is_array($output['store_list'])) {$i=0 ?>
-        	<?php foreach($output['store_list'] as $val) { if ($i == 3){ echo '</div><div class="showItem">'; $i = 1;} else{ echo ' '; $i++; } ?>
+          <?php foreach($output['store_list'] as $val) { if ($i == 3){ echo '</div><div class="showItem">'; $i = 1;} else{ echo ' '; $i++; } ?>
     <div class="starShopIner"> 
      <div class="topLogo"> 
       <a href="<?php echo urlMall('show_store','', array('store_id'=>$val['store_id']),$val['store_domain']);?>" target="_blank"> 
@@ -239,8 +257,8 @@ $(function(){
      </div> 
      
      <div class="proInfoBox"> 
-     	 <?php if(!empty($val['search_list_goods']) && is_array($val['search_list_goods'])){?>
-     	 	<?php foreach($val['search_list_goods'] as $k=>$v){?>
+        <?php if(!empty($val['search_list_goods']) && is_array($val['search_list_goods'])){?>
+          <?php foreach($val['search_list_goods'] as $k=>$v){?>
       <dl> 
        <div class="innerBox"> 
         <div class="proImg"> 
@@ -260,13 +278,13 @@ $(function(){
     
 
     </div></div></li>
-            		
-            	</ul>
+                
+              </ul>
             </div>
         </div>
 
 </div>
-
+ -->
 <!--品牌及店铺推荐end-->
 
 
