@@ -252,19 +252,21 @@ $(function(){
     <div class="navCont">
             <a href="<?php echo MALL_SITE_URL;?>" <?php if($output['index_sign'] == 'index' && $output['index_sign'] != '0') {echo 'class="now"';} ?>>首页</a>
             <div class="taoBtnList">
-                <a href="<?php echo urlMall('show_groupbuy', 'index');?>" class="taoListHv">淘抢购</a>
-                <div class="">
+                <a href="<?php echo urlMall('promotion', 'list');?>" class="taoListHv">淘特卖</a>
+               
+                <!-- <a href="<?php echo urlMall('show_groupbuy', 'index');?>" class="taoListHv">淘抢购</a> -->
+                <!-- <div class="">
                     <a href="<?php echo urlMall('show_groupbuy', 'index');?>" class="taoListHv">淘抢购</a>
                     <a href="<?php echo urlMall('show_groupbuy', 'index');?>">淘抢购首页</a>
                     <a href="<?php echo urlMall('promotion','index');?>">限时特价</a>
                     <a href="<?php echo urlMall('brand', 'index');?>">品牌精品</a>
                     <a href="<?php echo urlMall('special', 'special_list');?>">主题抢购<i class="theNew">new</i></a>
                     <a href="<?php echo urlMall('special', 'special_list');?>">运营保障</a>
-                </div>
+                </div> -->
             </div>
-            <a href="<?php echo urlMall('consult', 'index');?>" <?php if($output['index_sign'] == 'consult' && $output['index_sign'] != '0') {echo 'class="now"';} ?>>商家应答</a>
-            <a href="<?php echo urlMall('search', 'index');?>" <?php if($output['index_sign'] == 'search' && $output['index_sign'] != '0') {echo 'class="now"';} ?>>淘产品</a>
-            <a href="<?php echo urlMall('store_list', 'index');?>" <?php if($output['index_sign'] == 'store_list' && $output['index_sign'] != '0') {echo 'class="now"';} ?>>淘店铺</a>
+            <!-- <a href="<?php echo urlMall('consult', 'index');?>" <?php if($output['index_sign'] == 'consult' && $output['index_sign'] != '0') {echo 'class="now"';} ?>>商家应答</a> -->
+            <a href="<?php echo urlMall('search', 'index');?>" <?php if($output['index_sign'] == 'search' && $output['index_sign'] != '0') {echo 'class="now"';} ?>>产品</a>
+            <a href="<?php echo urlMall('store_list', 'index');?>" <?php if($output['index_sign'] == 'store_list' && $output['index_sign'] != '0') {echo 'class="now"';} ?>>店铺</a>
              <?php if (C('reads_isuse')){ ?>
             <a href="<?php echo READS_SITE_URL;?>" <?php if($output['index_sign'] == 'reads' && $output['index_sign'] != '0') {echo 'class="now"';} ?>>淘资讯</a><?php } ?>
             	<?php if (C('circle_isuse')){ ?>
@@ -303,6 +305,7 @@ $(function(){
       <?php }?>
       <?php }?>
       <?php }?>
+      <a href="<?php echo urlMall('show_joinin','index');?>" rel="nofollow">加盟我们</a>
        </div>
   </div>
 </nav>
