@@ -205,8 +205,8 @@
 .feiwa-m .select,.feiwa-m select{ border:1px solid #e0e0e0; top:0; background:#fff; max-height:24px; overflow:hidden; z-index:15; width:78px; float: left; margin-right: 15px; }
 .feiwa-m .feiwa-newinput{top:0; background:#fff; overflow:hidden; z-index:15;float: left; margin-right: 15px; }
 .feiwa-m .feiwa-newinput  input{  width:178px; padding: 0 0 0 5px;border:1px solid #e0e0e0; height:22px;  }
-.feiwa-new-st .sort{ border:1px solid #e8e8e8; background:#f8f8f8;}
-.feiwa-new-st .sort .sort-item a,.feiwa-new-st .sort .sort-item span{ display:block; float:left; padding:0 20px; line-height:38px; border-right:1px solid #e8e8e8;}
+.feiwa-new-st .sort{/* border:1px solid #e8e8e8; *//* background:#f8f8f8; */}
+.feiwa-new-st .sort .sort-item a,.feiwa-new-st .sort .sort-item span{display:block;float:left;/* padding:0 20px; */line-height: 28px;border: 1px solid #e8e8e8;width: 84px;height: 28px;text-align: center;}
 .feiwa-new-st .sort span.timeLimit i{ color:#999;} 
 .feiwa-new-st .sort-item>a>i,.sort-item>span>i{ padding-right:14px; background:url(../images/tao-icon.png?ver=1) 0 0 no-repeat;}
 .feiwa-new-st .sort .sale i{ background-position:32px -291px;}
@@ -224,15 +224,16 @@
 .feiwa-new-st .sort .right,.sort .left{ line-height:38px; padding-right:10px;}
 .feiwa-new-st .sort a.right:hover{ color:#ff5370}
 
-.feiwa-new-st .goodsList,.storesList{ padding:0 20px 30px; border:1px solid #e8e8e8; border-top:none}
-.feiwa-new-st .goodsList dl,.storesList dl{ padding:20px 0 15px; border-bottom:1px solid #f3f3f3;}
-.feiwa-new-st .storesList dl{ overflow: hidden; }
-.feiwa-new-st .goodsList dl:last-child, .storesList dl:last-child{ border-bottom:none}
-.feiwa-new-st .storesinfo{ overflow:visible}
-.feiwa-new-st .storesimg:hover{ box-shadow:0 0px 4px -1px #333;}
+.feiwa-new-st .goodsList,.storesList{padding: 0 10px 30px;/* border:1px solid #e8e8e8; */border-top:none;}
+.feiwa-new-st .goodsList dl,.storesList dl{padding:20px 0 15px;border-bottom:1px solid #f3f3f3;}
+.feiwa-new-st .storesList dl{overflow: hidden;border-bottom: 1px solid #dcdcdc;}
+.feiwa-new-st .goodsList dl:last-child, .storesList dl:last-child{/* border-bottom:none */}
+.feiwa-new-st .storesinfo{overflow:visible;float: left;width: 420px;padding-top: 46px;}
+.feiwa-new-st .storesimg:hover{ /* box-shadow:0 0px 4px -1px #333; */}
 .feiwa-new-st .storesimg{ float:left; margin-right:20px;}
-.feiwa-new-st .storesimg,.feiwa-new-st .storesimg img{ display:block; width:120px; height:120px;}
-.feiwa-new-st .storesrelated{ float:left; width:466px}
+.feiwa-new-st .storesimg,.feiwa-new-st .storesimg img{ display:block; width:118px; height:118px;}
+.feiwa-new-st .storesimg img{ width:118px; height:118px;border:1px solid #eee;}
+.feiwa-new-st .storesrelated{ float:left; width:260px}
 .feiwa-new-st .storesrelated>span{ display:block;}
 .feiwa-new-st .storesrelated .item1{ font-size:16px; margin-bottom:3px;}
 .feiwa-new-st .storesrelated .item1 a:hover{ color:#ff5370}
@@ -272,24 +273,24 @@
 .feiwa-new-st .showAll .showAll-icon{ background-position:7px -209px}
 .feiwa-new-st .showAll>div{ height:28px; overflow:hidden}
 
-.feiwa-new-st .goods-serv{ padding-top:25px;}
+.feiwa-new-st .goods-serv{/* padding-top:25px; */float: left;width: 760px;}
 .feiwa-new-st .goods-serv span{ float:left; color:#999} 
 .feiwa-new-st .goods-serv .item1{ width:516px; color:#666; height: 30px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
-.feiwa-new-st .goods-serv >a .item1{ margin-right: 20px; }
+.feiwa-new-st .goods-serv >a .item1{margin-right: 20px;}
 .feiwa-new-st .goods-serv .item2{ width:101px;}
 .feiwa-new-st .goods-serv .item3{ width:126px;}
 .feiwa-new-st .goods-serv .item4{ width:160px;}
 
-.feiwa-new-st .stores-serv .item1{ width:484px; color:#666;}
+.feiwa-new-st .stores-serv .item1{width:160px;color:#666;}
 .feiwa-new-st .stores-serv .item2{ width:85px;}
 .feiwa-new-st .stores-serv .item3{ width:105px;}
 .feiwa-new-st .stores-serv .item4{ width:144px;}
 .feiwa-new-st .stores-serv .item5{ width:85px;}
 
-.feiwa-new-st .goods-serv p{ line-height:30px; background:#f9f9f9; color:#999; overflow:hidden}
+.feiwa-new-st .goods-serv p{ line-height:30px; /* background:#f9f9f9; */ color:#999; overflow:hidden}
 .feiwa-new-st .goods-serv.stores-serv p .item1{ border-color:#6fb1e8; width:500px;}
 .feiwa-new-st .goods-serv p .item1{ border-left:4px solid #36ccca; width:532px; color:#666; text-indent:15px;}
-.feiwa-new-st .goods-serv>a{ display:block; line-height:42px; overflow:hidden; border-bottom:1px dashed #f3f3f3;}
+.feiwa-new-st .goods-serv>a{display:block;float: right;border:1px solid #d3d3d3;/* line-height:42px; */text-align:center;width: 160px;height: 188px;overflow:hidden;margin-right: 70px;/* border-bottom:1px dashed #f3f3f3; */}
 .feiwa-new-st .goods-serv>a span em{ font-size:14px; color:#ff5370; padding-right:5px; position:relative; top:1px;}
 .feiwa-new-st .goods-serv>a:hover{ background:#fcfcfc;}
 .feiwa-new-st .goods-serv>a:hover .item1{ color:#ff5370;}
