@@ -115,7 +115,7 @@ function call_back(picname){
   <div class="bgSelector"></div>
   <div id="foldSidebar"><i class="fa fa-outdent " title="展开/收起侧边导航"></i></div>
   <div class="admincp-name">
-    <h1>FeiWa mall</h1>
+    <h1>贵电商</h1>
     <h2>电商平台系统管理中心</h2>
   </div>
   <div class="nc-module-menu">
@@ -167,7 +167,9 @@ function call_back(picname){
   <div class="admincp-container-left">
     <div class="top-border"><span class="nav-side"></span><span class="sub-side"></span></div>
     <?php echo $output['left_nav'];?>
-    <div class="about" title="关于系统" onclick="ajax_form('about', '', '<?php echo urlAdmin('aboutus');?>', 640);"><i class="fa fa-copyright"></i><span>FeiWa.com</span></div>
+    <div class="about" ><i class="fa fa-copyright"></i><span>贵电商.com</span></div>
+    <!-- <div class="about" title="关于系统" onclick="ajax_form('about', '', '<?php echo urlAdmin('aboutus');?>', 640);"><i class="fa fa-copyright"></i><span>贵电商.com</span></div>
+     -->
   </div>
   <div class="admincp-container-right">
     <div class="top-border"></div>
