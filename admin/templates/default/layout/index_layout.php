@@ -55,7 +55,7 @@ $(function(){
 					$("#admin-manager-btn").removeClass().addClass("arrow");
                 }           
             });
-	
+              
 	$("#draggable").draggable({
 		handle: "div.title"
 	});
