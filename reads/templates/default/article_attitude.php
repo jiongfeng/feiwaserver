@@ -45,7 +45,9 @@ function show_article_attitude() {
 }
 
 </script>
-
+<div style="width: 100%;height: 450px;">
+    <img src="images/zxbanner.jpg">
+</div>
 <h3><?php echo $lang['attitude_title'];?></h3>
 <ul id="reads_attitude_flag">
   <?php for ($i = 1; $i <= 6; $i++) { ?>

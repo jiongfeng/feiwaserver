@@ -88,7 +88,7 @@ a:hover.ncu-btn2 {color: #498CD0; text-decoration: none; background-position: 0 
 /* 資訊头部区域、包含logo\搜索\天气插件			*/
 /* templates/default/layout/top.php 模板适用	*/
 /*==========================================*/
-#topHeader { width: 100%; margin: 0;}
+#topHeader {width: 100%;margin: 0;display: none;}
 #topHeader .warp-all { width: 1200px; height: 100px; margin: 5px auto 0 auto; position: relative; z-index:1; }
 #topHeader .reads-logo { position: absolute; z-index: auto; left: 0; top: 20px;}
 #topHeader .reads-logo a { line-height: 60px; font-size: 26px; }
@@ -258,7 +258,7 @@ a:hover.ncu-btn2 {color: #498CD0; text-decoration: none; background-position: 0 
 
 .article-layout-a { overflow: hidden;}
 .article-layout-a .mainbox { width: 860px; float: left; margin: 0 20px 0 0;}
-.article-layout-a .sidebar { width: 300px; float: right; margin: 0 0 0 20px;}
+.sidebar { width: 300px; float: right; margin: 0 0 0 20px;}
 
 .article-layout-b { background: #FFF url(../images/art_list_bg_b.png) repeat-y 0 0; overflow: hidden;}
 .article-layout-b .mainbox { width: 650px; float: right; margin: 0 0 0 20px;}
@@ -362,7 +362,7 @@ a:hover.ncu-btn2 {color: #498CD0; text-decoration: none; background-position: 0 
 /*文章列表-传统阅读*/
 .article-list { overflow: hidden;}
 .article-list li { padding: 30px 0 32px 0; overflow: hidden; border-bottom: 1px dotted #e4e4e6;}
-.article-list li h3.article-title { font-size: 20px;font-weight: bold; line-height: 25px; margin: 24px 10px 12px 10px;}
+.article-list li h3.article-title { font-size: 20px;font-weight: bold; line-height: 25px; margin: 0px 10px 12px 10px;}
 .article-list li h3 a { color: #333;}
 .article-list li h3 a:hover{color:#ff5370}
 .article-list li .article-sub { line-height: 16px; padding-bottom: 20px; margin: 0 10px; }
@@ -449,7 +449,7 @@ a:hover.ncu-btn2 {color: #498CD0; text-decoration: none; background-position: 0 
 /*块风格*/
 .block-style-one { margin-bottom:  20px;}
 .block-style-one .title { height: 50px; border-bottom: solid 1px #ebebeb;}
-.block-style-one .title h3 { font-size: 14px; line-height: 20px; color: #666; display: block; padding: 15px 12px; float: left;}
+.block-style-one .title h3 { font-size: 16px; line-height: 20px; color: #a51a74; display: block; padding: 15px 12px; float: left;}
 .block-style-one .content { background-color: #FFF; overflow: hidden; margin-top: 5px;}
 
 .block-style-two { border: solid 1px #D9D9D9;}
@@ -722,9 +722,16 @@ dl.taobao-item:hover dd.taobao-item-delete { display: block;}
 
 .ps-container .ps-scrollbar-x{position:absolute;bottom:3px;height:8px;background-color:#aaa;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;opacity:0;filter:alpha(opacity=0);-webkit-transition:opacity.2s linear;-moz-transition:opacity .2s linear;transition:opacity .2s linear}.ps-container:hover .ps-scrollbar-x{opacity:.6;filter:alpha(opacity=60)}.ps-container .ps-scrollbar-x:hover{opacity:.9;filter:alpha(opacity=90);cursor:default}.ps-container .ps-scrollbar-x.in-scrolling{opacity:.9;filter:alpha(opacity=90)}.ps-container .ps-scrollbar-y{position:absolute;right:3px;width:8px;background-color:#aaa;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;opacity:0;filter:alpha(opacity=0);-webkit-transition:opacity.2s linear;-moz-transition:opacity .2s linear;transition:opacity .2s linear}.ps-container:hover .ps-scrollbar-y{opacity:.6;filter:alpha(opacity=60)}.ps-container .ps-scrollbar-y:hover{opacity:.9;filter:alpha(opacity=90);cursor:default}.ps-container .ps-scrollbar-y.in-scrolling{opacity:.9;filter:alpha(opacity=90)}
 
-.wrapper .news-nav{ height: 52px; border-bottom: 1px solid #ebebeb; }
-.wrapper .news-nav a{ display: block; width: 134px; height: 51px; font-size: 16px; color: #333; text-align: center; line-height: 51px; float: left; margin-left: -1px; }
-.wrapper .news-nav a span{ display: inline-block; width: 100%; height: 18px; line-height: 18px; border-left: 1px solid #ebebeb; }
+.wrapper .news-nav{height: 40px;width: 864px;border-bottom: 2px solid #dcdcdc;/* margin-top: 60px; */}
+.wrapper .news-nav a{display: block;width: 100px;height: 40px;border-bottom: 2px solid #a51a74;font-size: 16px;color: #333;text-align: center;line-height: 40px;float: left;margin-left: -1px;}
+.wrapper .news-nav a span{display: inline-block;width: 100%;/* height: 18px; *//* line-height: 18px; */border-left: 1px solid #ebebeb;}
 .wrapper .news-nav a:first-child span{border-left:0}
-.wrapper .news-nav a.now,.wrapper .news-nav a:hover{ color: #ff5370; }
-.wrapper .news-nav a.now { border-bottom: 2px solid #ff5370; }
+.wrapper .news-nav a.now,.wrapper .news-nav a:hover{color: #a51a74;}
+.wrapper .news-nav a.now {/* border-bottom: 2px solid #a51a74; */}
+
+/* 2017/5/31 */
+.article_main{width: 656px;float: right}
+.article_pic{ width: 180px;height: 140px; margin-top: }
+
+
+.holdw{ border: 1px solid #ebebeb; }

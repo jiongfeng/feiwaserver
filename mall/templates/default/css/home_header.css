@@ -245,3 +245,46 @@ background: #a51a74;border-left:3px solid #a51a74 ;padding:8px 16px 8px 23px ;}
 .minicart_list .mcartRight .pro_price{font-family:Arial,Helvetica,sans-serif;display:block}
 .minicart_list .checkout_btn{background-color:#f55;color:#fff;padding:0 10px;display:inline-block;line-height:30px;font-size:14px}
 .minicart_list .checkout_btn:hover{background:#ea4848;color:#fff}
+
+.wrappert{
+	width: 1200px;
+    margin: auto;
+    font-family: "Microsoft Yahei";
+}
+.wrappert .news-navt {
+    height: 40px;
+    border-bottom: 2px solid #a51a74;
+    margin-top: 60px;
+    position: relative;
+}
+.wrappert .news-navt a.now, .wrappert .news-nav a:hover {
+    color: #a51a74;
+}
+.wrappert .news-navt a {
+    display: block;
+    width: 100px;
+    height: 40px;
+    border-bottom: 2px solid #a51a74;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+    margin-left: -1px;
+}
+.wrappert .news-navt a span {
+    display: inline-block;
+    width: 100%;
+}
+.wrappert .news-navt a:after {
+    content: '';
+    background: #a51a74;
+    width: 5px;
+    height: 21px;
+    font-size: 12px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    line-height: 17px;
+}

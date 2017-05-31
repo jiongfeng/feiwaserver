@@ -2,7 +2,7 @@
 .new-user-defined ul li.p2{float: left;}
 .new-user-defined ul li.p3{float: right;}
 .new-user-defined ul li img{width: 590px;}
-.s5-prom-wp{padding-bottom: 50px; background:#f6f6f6 ;}
+.s5-prom-wp{/* padding-bottom: 50px; */ background:#fff ;}
 .s5-prom-wp .feiwa-left{position: relative; padding-right: 200px; display: table;width: 688px;}
 .s5-prom-wp ._new_today_new_new_today_new{width: 688px; float: left;}
 .s5-prom-wp .feiwa-right{width: 295px;}
