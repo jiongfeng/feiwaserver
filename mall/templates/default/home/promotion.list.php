@@ -16,7 +16,7 @@
 				</div>
 				
 				<!--今日最新开始 -->
-				<div class="feiwa-left">
+				<!--<div class="feiwa-left">
 				<div class="_new_today_new_new_today_new">
 	            <div class="ml-tit">
 					<img alt="" src="<?php echo MALL_SITE_URL;?>/img/5715cec7N4f8e8f43.png">
@@ -33,7 +33,7 @@
                                         <p class="infoTit1 time-remain" count_down="<?php echo $val['end_time']-TIMESTAMP;?>"><i></i><em time_id="d">0</em>天<em time_id="h">0</em>时<em time_id="m">0</em>分<em time_id="s">0</em>秒</p>
                                         <span class="arrow-circle"></span>
 										</div>
-<!--<div class="act-msg">  <div class="act-mg-bg"></div> <p class="txt">满199元,减100元</p></div>-->  </div>
+<!--<div class="act-msg">  <div class="act-mg-bg"></div> <p class="txt">满199元,减100元</p></div> </div>
  <div class="mli-info">  <div class="brand-logo">
 <a href="<?php echo urlMall('promotion','index',array('id'=>$val['xianshi_id']));?>" target="_blank">
   <img width="150" height="35"  src="<?php echo xsthumb($val['xianshi_image2']);?>">
@@ -57,14 +57,13 @@
 	        
 	        
 	        
-	        
 	        <div class="feiwa-right">
 	            <div class="sidebar">
 					<!-- 自定义模块【预告栏上方广告】开始 -->
 					                    <!-- 自定义模块【预告栏上方广告】 结束 -->
 					
 	            	<!--右侧排行榜  开始-->
-					<div class="tabs hoversTab">																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										                      
+	<!--				<div class="tabs hoversTab">																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										                      
 <ul class="tab-mt tabCont">																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										                    		
                             <li class="fore1 now"><span>推荐TOP10</span><b></b></li>
                             <li class="fore2"><span>品牌推荐</span><b></b></li>	                    </ul>
@@ -104,40 +103,44 @@
 	                
 	                <!-- ------------自定义模块------------ 开始 -->
 	                		                <!-- 自定义模块【模块一】开始 第三次 -->
-							                	<div class="custom" style="display:none">
-		                    <div class="c-tit">
-		                        <i class="ct-line"></i>
-		                        <h3>---</h3>
-		                    </div>
-		                    <div class="c-con">
-								<div class="btns btn_prev" id="prev" style="display: none;"></div>
-								<div class="btns btn_next" id="next"></div>
-		                        <div class="img-box">
-		                            <ul style="width: 825px;">
-		                                <li>
-		                                    <a target="_blank" href="#"><img src="//img11.360buyimg.com/red/jfs/t331/354/211290830/67643/ab429684/5405633eN1c75404a.jpg" width="275" height="275" alt=""></a>
-		                                </li>
-		                                <li>
-		                                    <a target="_blank" href="#"><img src="" width="275" height="275" alt=""></a>
-		                                </li>
-		                                <li>
-		                                    <a target="_blank" href="#"><img src="" width="275" height="275" alt=""></a>
-		                                </li>
-		                            </ul>
-		                        </div>
-		                    </div>
-		                </div>
-								                <!-- 自定义模块【模块一】 结束 -->
-		                
-		                <!-- 自定义模块【模块二】开始 -->
-		                		                <!-- 自定义模块【模块二】结束 -->
-	                	                <!-- ------------自定义模块------------ 结束 -->
-	            </div>
-	        </div>
+							 <!--                	<div class="custom" style="display:none">
+							 		                    <div class="c-tit">
+							 		                        <i class="ct-line"></i>
+							 		                        <h3>---</h3>
+							 		                    </div>
+							 		                    <div class="c-con">
+							 								<div class="btns btn_prev" id="prev" style="display: none;"></div>
+							 								<div class="btns btn_next" id="next"></div>
+							 		                        <div class="img-box">
+							 		                            <ul style="width: 825px;">
+							 		                                <li>
+							 		                                    <a target="_blank" href="#"><img src="//img11.360buyimg.com/red/jfs/t331/354/211290830/67643/ab429684/5405633eN1c75404a.jpg" width="275" height="275" alt=""></a>
+							 		                                </li>
+							 		                                <li>
+							 		                                    <a target="_blank" href="#"><img src="" width="275" height="275" alt=""></a>
+							 		                                </li>
+							 		                                <li>
+							 		                                    <a target="_blank" href="#"><img src="" width="275" height="275" alt=""></a>
+							 		                                </li>
+							 		                            </ul>
+							 		                        </div>
+							 		                    </div>
+							 		                </div>
+							 								                自定义模块【模块一】 结束
+							 		                
+							 		                自定义模块【模块二】开始
+							 		                		                自定义模块【模块二】结束
+							 	                	                ------------自定义模块------------ 结束
+							 	            </div>
+							 	        </div>
+							 				 -->
 				
 				
-				
-				
+				<div class="wrappert">
+					<div class="news-navt">
+						<a href="http://localhost/shopping/reads" class="now"><span>超值礼包</span></a>
+					</div>
+				</div>
 				
 				
 			</div>
