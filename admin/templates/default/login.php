@@ -37,7 +37,7 @@
       <div class="submit2"></div>
   </form>
   <div class="bottom">
-    <h6>Copyright 2006-2015 FeiWa  </h6>
-    <h6>Powered by <?php echo $output['setting_config']['feiwa_version'];?>-<?php echo feiwa_by_version;?></h6>
+    <h6>Copyright 2016-2017 贵电商  </h6>
+    <!-- <h6>Powered by <?php echo $output['setting_config']['feiwa_version'];?>-<?php echo feiwa_by_version;?></h6> -->
   </div>
 </div>
