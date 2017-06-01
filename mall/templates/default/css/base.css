@@ -371,12 +371,12 @@ a:hover.btn-darkgray,a:hover.ncbtn-darkgray{background-color:#434A54}
 .feiwa-footer .foot_navi .footLeft .erweima { width: 98px; height: 98px; margin: 0 auto; border: 1px solid #ccc; }
 .feiwa-footer .foot_navi .footLeft p { font-size: 12px; color: #666; text-align: center; padding-top: 8px; }
 .feiwa-footer .foot_navi .footRight { float:left; padding-top: 6px; width: 670px; }
-.feiwa-footer .foot_navi dl { line-height: 1.5; width: 100px; float: left; font-size: 13px; padding-left: 34px; }
+.feiwa-footer  dl { line-height: 1.5; width: 100px; float: left; font-size: 13px; padding-left: 34px; }
 .feiwa-footer .foot_navi .lastdl { width: 100px; }
-.feiwa-footer .foot_navi dl dt { font-size: 16px; color: #333; margin-bottom: 10px; font-weight: normal; }
-.feiwa-footer .foot_navi dl dd { margin-bottom: 10px; }
-.feiwa-footer .foot_navi dl dd a { color: #666; }
-.feiwa-footer .foot_navi dl dd a:hover { color: #0fcfe1; }
+.feiwa-footer  dl dt { font-size: 16px; color: #333; margin-bottom: 10px; font-weight: normal; }
+.feiwa-footer  dl dd { margin-bottom: 10px; }
+.feiwa-footer  dl dd a { color: #666; }
+.feiwa-footer  dl dd a:hover { color: #0fcfe1; }
 .feiwa-footer .gray_box { padding: 10px 0 15px; line-height: 22px; text-align: center; color: #999; }
 .feiwa-footer .gray_box p { font-family: "Microsoft YaHei"; }
 .feiwa-footer .gray_box a { color: #999; font-family: "Microsoft YaHei"; }
@@ -669,3 +669,14 @@ div#doyoo_panel { display: none !important;}
 .headNew-bg .phone .download .qrcode{ margin-top: 50px; text-align: center;}
 .headNew-bg .phone .addurl a{ background: url(); color:#333 ;}
 .headNew-bg .phone .addurl a:hover{color:#ff6980 ;}
+
+/**/
+.gzabout {
+	width:371px;
+	height: 80px;
+	float: left;
+	margin-top: 5px;
+}
+.gzabout dl{
+	width: 163px;
+}

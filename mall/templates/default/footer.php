@@ -48,15 +48,29 @@ fade();
 
 
   </div> 
-  <div class="ft_weixin"> 
+
+      <div class="gzabout">
+          <dl>
+          <dt>关注我们</dt>
+           <dd>客服电话：0851-84603146</dd>
+          </dl>
+         
+      </div>
+   <div class="ft_weixin"> 
+      
    <div class="erweima"><img src="<?php echo UPLOAD_SITE_URL.DS.ATTACH_COMMON.DS.C('mobile_app');?>"></div> 
-   <p>下载FeiWaAPP</p> 
+   <p>贵电商淘宝养生馆</p> 
   </div> 
   <div class="ft_app"> 
    <div class="erweima"><img src="<?php echo UPLOAD_SITE_URL.DS.ATTACH_MOBILE.DS.C('mobile_wx');?>"></div> 
-   <p>FeiWa官方微信</p> 
+   <p>www.guidianshang.com.cn</p> 
   </div> 
- </div> <?php }?>
+  <div class="ft_app"> 
+   <div class="erweima"><img src="<?php echo UPLOAD_SITE_URL.DS.ATTACH_MOBILE.DS?>/gzh.jpg"></div> 
+   <p>贵电商服务公众号</p> 
+  </div>
+ </div>
+ <?php }?>
  <div class="gray_box"> 
   <ul class="bt_securityAlliance clearfix"> 
    <li><a rel="nofollow" href="http://www.miitbeian.gov.cn/" target="_blank"><img src="<?php echo MALL_SITE_URL;?>/img/bt_logo08.png" alt="工业和信息化部"></a></li> 
@@ -77,7 +91,7 @@ fade();
 			case '2':echo urlMember('article', 'article',array('ac_id'=>$nav['item_id']));break; 
 			case '3':echo urlMall('activity', 'index',array('activity_id'=>$nav['item_id']));break;}?>">
 			<?php echo $nav['nav_title'];?></a><?php }}}?>|
-			<a href="<?php echo urlmall('link');?>">友情链接</a>|<a href="http://www.feiwa.org">FeiWa</a></p>
+			<a href="<?php echo urlmall('link');?>">友情链接</a></p>
 
    <div class="copy_right">
      ©2017 贵电商.com 
