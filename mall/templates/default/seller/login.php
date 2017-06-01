@@ -132,7 +132,7 @@ $(document).ready(function() {
       <input type="submit" class="login-submit" value="确认登录">
     </div>
   </form>
-  <div class="copyright">Powered by <?php echo $output['setting_config']['feiwa_version'];?>-<?php echo feiwa_by_version;?> © 2007-2015 <a href="http://www.feiwa.org/" target="_blank">feiwa.org</a> </div>
+  <div class="copyright">Powered by 贵电商<!-- <?php echo $output['setting_config']['feiwa_version'];?>-<?php echo feiwa_by_version;?> --> © 2016-2017 <a href="http://www.贵电商.com/" target="_blank">贵电商.com</a> </div>
 </div>
 </body>
 </html>

@@ -15,8 +15,8 @@
     <?php }?>
     <?php }?>
   </p>
-  Copyright 2007-2015 FeiWa  ,All rights reserved.<br />
-  Powered by <?php echo $output['setting_config']['feiwa_version'];?>-<?php echo feiwa_by_version;?>
+  Copyright 2016-2017 贵电商  ,All rights reserved.<br />
+  <!-- Powered by <?php echo $output['setting_config']['feiwa_version'];?>-<?php echo feiwa_by_version;?> -->
   <?php echo $output['setting_config']['icp_number']; ?><br />
   <?php echo html_entity_decode($output['setting_config']['statistics_code'],ENT_QUOTES); ?> </div>
 <?php if (C('debug') == 1){?>
