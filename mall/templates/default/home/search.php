@@ -207,7 +207,7 @@ body { _behavior: url(<?php echo MALL_TEMPLATES_URL;
         <div class="goods-promotion"><span>限时</span></div>
         <?php }?>
           <div class="goods-name"><a href="<?php echo urlMall('goods','index',array('goods_id'=>$value['goods_id']));?>" target="_blank" title="<?php echo $value['goods_jingle'];?>"><?php echo $value['goods_name'];?></a></div>
-          <div class="goods-price" title="商品价格<?php echo $lang['feiwa_colon'].$lang['currency'].ncPriceFormat($value['goods_promotion_price']);?>"><?php echo $lang['currency'];?><?php echo ncPriceFormatForList($value['goods_promotion_price']);?><em class="market-price" title="市场价：<?php echo $lang['currency'].$value['goods_marketprice'];?>"><?php echo ncPriceFormatForList($value['goods_marketprice']);?></em></div>
+          <div class="goods-price" title="商品价格<?php echo $lang['feiwa_colon'].$lang['currency'].ncPriceFormat($value['goods_promotion_price']);?>"><?php echo ncPriceFormatForList($value['goods_promotion_price']);?><em class="market-price" title="市场价：<?php echo $lang['currency'].$value['goods_marketprice'];?>"><?php echo ncPriceFormatForList($value['goods_marketprice']);?></em></div>
     </li>
     <?php }?>
   </ul>
