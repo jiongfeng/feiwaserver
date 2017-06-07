@@ -61,7 +61,7 @@ var connect_weixin_appid = "<?php echo C('weixin_appid');?>";
             <a href="<?php echo MALL_SITE_URL;?>" target="_blank">返回首页</a>
             <em class="download"></em>
         </div>
-        <div class="box-xx box_xx-line feiwa-left">|</div>
+        <!--<div class="box-xx box_xx-line feiwa-left">|</div>
         <div class="phone">
             <a href="<?php echo WAP_SITE_URL;?>" target="_blank">移动APP</a>
             <em class="download" ><div class="qrcode"><img src="<?php echo UPLOAD_SITE_URL.DS.ATTACH_COMMON.DS.C('mobile_app');?>"></div>
@@ -74,7 +74,7 @@ var connect_weixin_appid = "<?php echo C('weixin_appid');?>";
           <?php } ?>
                         </div>
        </em>
-        </div>
+        </div>-->
         <div class="box-xx box_xx-line feiwa-left">|</div>
         <div class="weixin">
             <a href="javascript:;" target="_blank">微信号</a>
