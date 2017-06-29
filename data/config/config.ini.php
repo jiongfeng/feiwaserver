@@ -1,25 +1,25 @@
 <?php
 
 $config = array();
-$config['mall_site_url']        = 'http://www.xn--czrz65evoq.com/mall';
-$config['reads_site_url']         = 'http://www.xn--czrz65evoq.com/reads';
-$config['shareshow_site_url']         = 'http://www.xn--czrz65evoq.com/shareshow';
-$config['circle_site_url']         = 'http://www.xn--czrz65evoq.com/circle';
-$config['admin_site_url']       = 'http://www.xn--czrz65evoq.com/admin';
-$config['mobile_site_url']      = 'http://www.xn--czrz65evoq.com/mo_bile';
-$config['wap_site_url']         = 'http://www.xn--czrz65evoq.com/wap';
-$config['chat_site_url']        = 'http://www.xn--czrz65evoq.com/chat';
-$config['node_site_url']        = 'http://www.xn--czrz65evoq.com:8090';
-$config['delivery_site_url']    = 'http://www.xn--czrz65evoq.com/delivery';
-$config['chain_site_url']       = 'http://www.xn--czrz65evoq.com/chain';
-$config['member_site_url']      = 'http://www.xn--czrz65evoq.com/member';
-$config['upload_site_url']      = 'http://www.xn--czrz65evoq.com/data/upload';
-$config['resource_site_url']    = 'http://www.xn--czrz65evoq.com/data/resource';
-$config['reads_modules_url']      = 'http://www.xn--czrz65evoq.com/admin/modules/reads';
-$config['shareshow_modules_url']      = 'http://www.xn--czrz65evoq.com/admin/modules/shareshow';
-$config['circle_modules_url']      = 'http://www.xn--czrz65evoq.com/admin/modules/circle';
-$config['admin_modules_url']    = 'http://www.xn--czrz65evoq.com/admin/modules/mall';
-$config['mobile_modules_url']   = 'http://www.xn--czrz65evoq.com/admin/modules/mobile';
+$config['mall_site_url']        = 'http://mall.xn--czrz65evoq.com/mall';
+$config['reads_site_url']         = 'http://mall.xn--czrz65evoq.com/reads';
+$config['shareshow_site_url']         = 'http://mall.xn--czrz65evoq.com/shareshow';
+$config['circle_site_url']         = 'http://mall.xn--czrz65evoq.com/circle';
+$config['admin_site_url']       = 'http://mall.xn--czrz65evoq.com/admin';
+$config['mobile_site_url']      = 'http://mall.xn--czrz65evoq.com/mo_bile';
+$config['wap_site_url']         = 'http://mall.xn--czrz65evoq.com/wap';
+$config['chat_site_url']        = 'http://mall.xn--czrz65evoq.com/chat';
+$config['node_site_url']        = 'http://mall.xn--czrz65evoq.com:8090';
+$config['delivery_site_url']    = 'http://mall.xn--czrz65evoq.com/delivery';
+$config['chain_site_url']       = 'http://mall.xn--czrz65evoq.com/chain';
+$config['member_site_url']      = 'http://mall.xn--czrz65evoq.com/member';
+$config['upload_site_url']      = 'http://mall.xn--czrz65evoq.com/data/upload';
+$config['resource_site_url']    = 'http://mall.xn--czrz65evoq.com/data/resource';
+$config['reads_modules_url']      = 'http://mall.xn--czrz65evoq.com/admin/modules/reads';
+$config['shareshow_modules_url']      = 'http://mall.xn--czrz65evoq.com/admin/modules/shareshow';
+$config['circle_modules_url']      = 'http://mall.xn--czrz65evoq.com/admin/modules/circle';
+$config['admin_modules_url']    = 'http://mall.xn--czrz65evoq.com/admin/modules/mall';
+$config['mobile_modules_url']   = 'http://mall.xn--czrz65evoq.com/admin/modules/mobile';
 
 $config['version']              = '20170306011_1.2.2';
 $config['setup_date']           = '2017-05-18 16:06:56';
