@@ -602,7 +602,7 @@ $shownLevelSkus[$sku] = true; ?>
   </div>
 </div>
 </div>
-<form id="buynow_form" method="get" action="<?php echo MALL_SITE_URL;?>/index.php">
+<form id="buynow_form" method="post" action="<?php echo MALL_SITE_URL;?>/index.php">
   <input id="app" name="app" type="hidden" value="buy" />
   <input id="feiwa" name="feiwa" type="hidden" value="buy_step1" />
   <input id="cart_id" name="cart_id[]" type="hidden"/>
