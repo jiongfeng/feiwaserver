@@ -36,6 +36,8 @@ class buyControl extends BaseBuyControl {
         //得到购买数据
         $logic_buy = Logic('buy');
         $result = $logic_buy->buyStep1($_POST['cart_id'], $_POST['ifcart'], $_SESSION['member_id'], $_SESSION['store_id'], $_POST['jjg'],$this->member_info['orderdiscount'],$this->member_info['level'],$_POST['ifchain']);
+        var_dump($result);
+        exit;
         if (!$result['state']) {
             showMessage($result['msg'], '', 'html', 'error');
         } else {
