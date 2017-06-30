@@ -32,6 +32,7 @@ class buyControl extends BaseBuyControl {
 
         //虚拟商品购买分流
         $this->_buy_branch($_POST);
+        var_dump($_GET);
         exit;
 
         //得到购买数据
