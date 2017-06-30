@@ -228,8 +228,6 @@ class buyLogic {
     public function getGoodsList($cart_id, $member_id, $store_id,$orderdiscounts = array()) {
 
         //取得POST ID和购买数量
-        var_dump($cart_id);
-        exit;
         $buy_items = $this->_parseItems($cart_id);
         if (empty($buy_items)) {
             return callback(false, '所购商品无效');
@@ -1477,6 +1475,7 @@ class buyLogic {
         if (is_array($cart_id)) {
             foreach ($cart_id as $value) {
                 if (preg_match_all('/^(\d{1,10})\|(\d{1,6})$/', $value, $match)) {
+                    var_dump($match);exit;
                     if (intval($match[2][0]) > 0) {
                         $buy_items[$match[1][0]] = $match[2][0];
                     }
