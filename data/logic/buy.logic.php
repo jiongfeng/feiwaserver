@@ -1474,9 +1474,7 @@ class buyLogic {
         $buy_items = array();
         if (is_array($cart_id)) {
             foreach ($cart_id as $value) {
-                var_dump($value);exit;
-                if (preg_match_all('/^(\d{1,10})\|(\d{1,6})$/', $value, $match)) {
-                    var_dump($match);exit;
+                if (preg_match_all('/^(\d{1,20})\|(\d{1,6})$/', $value, $match)) {
                     if (intval($match[2][0]) > 0) {
                         $buy_items[$match[1][0]] = $match[2][0];
                     }
