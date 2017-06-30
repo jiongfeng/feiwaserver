@@ -65,8 +65,6 @@ class buyLogic {
         }
 
         //得到购买商品信息
-        var_dump($ifcart);
-        exit;
         if ($ifcart) {
             $result = $this->getCartList($cart_id, $member_id, $jjg,$orderdiscounts);
         } else {
@@ -1476,6 +1474,7 @@ class buyLogic {
         $buy_items = array();
         if (is_array($cart_id)) {
             foreach ($cart_id as $value) {
+                var_dump($value);exit;
                 if (preg_match_all('/^(\d{1,10})\|(\d{1,6})$/', $value, $match)) {
                     var_dump($match);exit;
                     if (intval($match[2][0]) > 0) {
