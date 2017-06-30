@@ -469,6 +469,8 @@ function Logic($model = null, $base_path = null){
     if (!is_null($model) && isset($_cache[$cache_key])) return $_cache[$cache_key];
     $base_path = $base_path == null ? BASE_DATA_PATH : $base_path;
     $file_name = $base_path.'/logic/'.$model.'.logic.php';
+    var_dump($file_name);
+    exit;
     $class_name = $model.'Logic';
     if (!file_exists($file_name)){
         return $_cache[$cache_key] =  new Model($model);
