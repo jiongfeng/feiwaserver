@@ -65,6 +65,8 @@ class buyLogic {
         }
 
         //得到购买商品信息
+        var_dump($ifcart);
+        exit;
         if ($ifcart) {
             $result = $this->getCartList($cart_id, $member_id, $jjg,$orderdiscounts);
         } else {
