@@ -228,6 +228,8 @@ class buyLogic {
     public function getGoodsList($cart_id, $member_id, $store_id,$orderdiscounts = array()) {
 
         //取得POST ID和购买数量
+        var_dump($cart_id);
+        exit;
         $buy_items = $this->_parseItems($cart_id);
         if (empty($buy_items)) {
             return callback(false, '所购商品无效');
