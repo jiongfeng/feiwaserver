@@ -27,7 +27,7 @@
             +'<a href="'+SiteUrl+'" class="pc"><span><i></i></span><p>电脑版</p></a>'
          +'</div>'
 		 +'<div class="copyright">'
-		 +'Copyright&nbsp;&copy;&nbsp;2007-2015 FeiWa<a href="javascript:void(0);">FeiWa.com</a>版权所有'
+		 +'Copyright&nbsp;&copy;&nbsp;2007-2015 贵电商<a href="javascript:void(0);">mall.贵电商.com</a>版权所有'
     	 +'</div></div>'
     	+ '<div id="footnav" class="footnav clearfix"><ul>'
 		+'<li><a href="'+WapSiteUrl+'"><i class="home"></i><p>首页</p></a></li>'
