@@ -63,20 +63,20 @@
     <?php if(!empty($output['pic_list']) && is_array($output['pic_list'])){ ?>
     <?php foreach($output['pic_list'] as $key => $val){ ?>
     <?php if(!empty($val)){ $pic_n++; ?>
-    <li style="background-color: #84ebda; background-image: url(<?php echo UPLOAD_SITE_URL.'/'.ATTACH_COMMON.'/'.$val;?>)" ></li>
+    <li style=" background-image: url(<?php echo UPLOAD_SITE_URL.'/'.ATTACH_COMMON.'/'.$val;?>)" ></li>
     <?php } ?>
     <?php } ?>
     <?php } ?>
   </ul>
 </div>
 
-<div class="indextip">
+<!--<div class="indextip">
   <div class="container"> <span class="title"><i></i>
     <h3>商家助手</h3>
-    </span> <span class="content"><?php echo $output['show_txt'];?></span><span class="titles"><a target="_blank" href="http://www.feiwa.org"><i></i>
+    </span> <span class="content"><?php /*echo $output['show_txt'];*/?></span><span class="titles"><a target="_blank" href="http://www.feiwa.org"><i></i>
     <h3>点击下载</h3></a>
     </span></div>
-</div>
+</div>-->
 <div class="mains">
 <div class="joinin-index-step">
     <span class="step">
