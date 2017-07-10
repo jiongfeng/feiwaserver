@@ -155,7 +155,7 @@ function query(name, value){
 
         <?php foreach($store['search_list_goods'] as $k=>$v){?>
                                                 <a href="<?php echo urlMall('goods','index',array('goods_id'=>$v['goods_id']));?>" target="_blank" title="<?php echo $v['goods_name'];?>">
-                            <div style="width: 120px;height: 120px;margin:5px auto;"><img src="http://www.xn--czrz65evoq.com/data/upload/mall/store/goods/<?php echo $store['store_id'];?>/<?php echo $v['goods_id'];?>/1_360.jpg" style="width: 120px;height: 120px;" /></div>
+                            <div style="width: 120px;height: 120px;margin:5px auto;"><img src="http://mall.xn--czrz65evoq.com/data/upload/mall/store/goods/<?php echo $store['store_id'];?>/<?php echo $v['goods_id'];?>/1_360.jpg" style="width: 120px;height: 120px;" /></div>
                             <p class="item1"><?php echo $v['goods_name'];?></p>
                             <!-- <span class="item5"><?php echo $v['goods_collect'];?>人</span>
                             <span class="item2"><?php echo $v['goods_salenum'];?>件</span> -->
