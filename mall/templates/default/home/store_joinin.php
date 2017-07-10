@@ -70,13 +70,13 @@
   </ul>
 </div>
 
-<div class="indextip">
+<!--<div class="indextip">
   <div class="container"> <span class="title"><i></i>
     <h3>商家助手</h3>
-    </span> <span class="content"><?php echo $output['show_txt'];?></span><span class="titles"><a target="_blank" href="http://www.feiwa.org"><i></i>
+    </span> <span class="content"><?php /*echo $output['show_txt'];*/?></span><span class="titles"><a target="_blank" href="http://www.feiwa.org"><i></i>
     <h3>点击下载</h3></a>
     </span></div>
-</div>
+</div>-->
 <div class="mains">
 <div class="joinin-index-step">
     <span class="step">
