@@ -435,7 +435,7 @@ to {  width: 100%;}
 .footnav ul li a { display: block; position: relative;}
 .footnav ul li a em { background-color: #ED5564; width: 0.3rem; height: 0.3rem; border-radius: 100%; position: absolute; top: -0.15rem; right: 0.85rem;}
 .footnav ul li i { vertical-align: top; display: inline-block; width: 1rem; height: 1rem; margin: 0 auto 0.1rem auto; opacity: 0.5;}
-i.home { background-image: url(../images/home_b.png); background-size: cover;}
+i.home { background-image: url(../images/home_b1.png); background-size: cover;}
 i.categroy { background-image: url(../images/browse_list.png); background-size: cover;}
 i.search { background-image: url(../images/search_ico.png); background-size: cover;}
 i.cart { background-image: url(../images/cart_b.png); background-size: cover;}
@@ -448,6 +448,7 @@ i.cart2 { background-image: url(../images/cart_b_2.png); background-size: cover;
 i.member2 { background-image: url(../images/member_b_2.png); background-size: cover;}
 
 .footnav ul li p { font-size: 0.55rem; color: #888; line-height: 1rem; height: 1rem;}
+.footnav ul li:first-child p{ color: #a51a75;}
 .footnav ul li sup {position:absolute; top:-8px; right:calc(50% - 25px);color:#F00; border-radius: 10px;padding: 5px;background-color:#f00;color:#fff;line-height: 10px;font-size:10px;}
 .footnav ul li a.current p {color: #E16254;}
 

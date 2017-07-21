@@ -74,7 +74,7 @@
 <!--HomeFocusLayout End-->
 <!--今日主题优惠-->
 <div class="sales-events wrapper">
-	<div class="lf"><?php echo $output['web_html']['index_sale'];?></div>
+	<div class="lf shoptj"><?php echo $output['web_html']['index_sale'];?></div>
 	<div class="rt"><div class="fastZT fastZT1">
 <div class="hoverTab topbox">
 	<div class="tabCont">

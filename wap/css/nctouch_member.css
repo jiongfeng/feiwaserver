@@ -486,3 +486,10 @@ i.cc-10 { background-image: url(../images/mcc_10_b.png); background-size: cover;
 #canv .code_ft{ font-size:.6rem; color:#fff}
 .ofver{ font-size:.8rem;text-align:center; bottom:1rem; right:0; z-index:125; position:fixed}
 .ofver a{color:#fff; background:#F00; padding:.5rem; }
+
+i.home { background-image: url(../images/home_b.png); background-size: cover;}
+i.cart { background-image: url(../images/cart_b.png); background-size: cover;}
+i.search { background-image: url(../images/search_ico.png); background-size: cover;}
+i.member{ background: url(../images/member_b1.png);background-size: cover;}
+.footnav ul li p{ color: #888 !important;}
+.footnav ul li:last-child p{ color: #a51a75 !important;}

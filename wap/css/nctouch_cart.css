@@ -177,3 +177,9 @@ to { opacity: 0;  display: none;}
 .nctouch-pay label.checked span { -webkit-filter: grayscale(0); -moz-filter: grayscale(0); -ms-filter: grayscale(0); -o-filter: grayscale(0); filter: grayscale(0); filter: gray; opacity: 1;}
 .nctouch-pay label span.alipay { background-image: url(../images/alipay.jpg);}
 .nctouch-pay label span.wxpay { background-image: url(../images/wxpay.jpg);}
+
+i.home { background-image: url(../images/home_b.png); background-size: cover;}
+i.cart { background-image: url(../images/cart_b1.png); background-size: cover;}
+i.search { background-image: url(../images/search_ico.png); background-size: cover;}
+.footnav ul li p{ color: #888 !important;}
+.footnav ul li:nth-of-type(4) p{ color: #a51a75 !important;}
