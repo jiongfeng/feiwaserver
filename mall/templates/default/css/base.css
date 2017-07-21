@@ -371,7 +371,7 @@ a:hover.btn-darkgray,a:hover.ncbtn-darkgray{background-color:#434A54}
 .feiwa-footer .foot_navi .footLeft .erweima { width: 98px; height: 98px; margin: 0 auto; border: 1px solid #ccc; }
 .feiwa-footer .foot_navi .footLeft p { font-size: 12px; color: #666; text-align: center; padding-top: 8px; }
 .feiwa-footer .foot_navi .footRight { float:left; padding-top: 6px; width: 670px; }
-.feiwa-footer  dl { line-height: 1.5; width: 100px; float: left; font-size: 13px; padding-left: 34px; }
+.feiwa-footer  dl { line-height: 1.5; width: 104px; float: left; font-size: 13px; padding-left: 30px; }
 .feiwa-footer .foot_navi .lastdl { width: 100px; }
 .feiwa-footer  dl dt { font-size: 16px; color: #333; margin-bottom: 10px; font-weight: normal; }
 .feiwa-footer  dl dd { margin-bottom: 10px; }
@@ -391,7 +391,7 @@ a:hover.btn-darkgray,a:hover.ncbtn-darkgray{background-color:#434A54}
 .logFooter { text-align: center; padding: 20px 0; color: #999999; font-size: 12px; line-height: 22px; }
 .logFooter p { text-align: center; }
 .logFooter a { color: #999999; font-size: 12px; line-height: 22px; }
-.ensureBox{ /* border-bottom:1px solid #eee; */ overflow:hidden; zoom:1; width: 100%; margin:0 auto 20px;background-color: #ffe8f7;}
+.ensureBox{ /* border-bottom:1px solid #eee; */ overflow:hidden; zoom:1; width: 100%; margin:0 auto 20px;background-color: #f2f2f2;}
 .ensureBox ul{ width:1240px; padding: 22px 33px;margin-left: 73px;}
 .ensureBox ul li{ float:left; width: 270px;font-size:16px; text-align:left; overflow:hidden; zoom:1; padding: 10px 0 0 29px;}
 .ensureBox ul li a{ display:block; position:relative; color:#999;padding:6px 0 6px 70px;-webkit-transition: all 0.3s ease 0s;transition: all 0.3s ease 0s;float:left;cursor:default;}
@@ -673,10 +673,10 @@ div#doyoo_panel { display: none !important;}
 /**/
 .gzabout {
 	width:371px;
-	height: 80px;
+	height: 62px;
 	float: left;
 	margin-top: 5px;
 }
 .gzabout dl{
-	width: 163px;
+	width: 174px;
 }
