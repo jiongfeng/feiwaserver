@@ -140,7 +140,7 @@ class messageControl extends SystemControl{
 			$obj_email->set('email_from',$email_addr);
             $obj_email->set('site_name',$site_title);
 			$result = $obj_email->send($email_test,$subject,$message);
-			dump($result);
+			var_dump($result);
 			exit;
 // 		}else {
 // 			$result = @mail($email_test,$subject,$message);
