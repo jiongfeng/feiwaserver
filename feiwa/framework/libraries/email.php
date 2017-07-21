@@ -75,7 +75,7 @@ final class Email{
 		/**
 		 * 发送
 		 */
-		if(!$fp = @fsockopen($this->email_server, $this->email_port, $errno, $errstr, 30)) {
+		if(!$fp = @fsockopen($this->email_server, $this->email_port, $errno, $errstr, 90)) {
 		    echo $this->email_server.':'.$this->email_port." CONNECT - Unable to connect to the SMTP server<br>";
 		    echo  $errno.' : '.$errstr;
 			$this->resultLog($this->email_server.':'.$this->email_port." CONNECT - Unable to connect to the SMTP server");
