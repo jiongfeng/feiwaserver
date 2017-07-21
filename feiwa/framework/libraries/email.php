@@ -77,6 +77,7 @@ final class Email{
 		 */
 		if(!$fp = @fsockopen($this->email_server, $this->email_port, $errno, $errstr, 30)) {
 			$this->resultLog($this->email_server.':'.$this->email_port." CONNECT - Unable to connect to the SMTP server");
+			echo 1;
 			return false;
 		}
 		stream_set_blocking($fp, true);
@@ -84,6 +85,7 @@ final class Email{
 		$lastmessage = fgets($fp, 512);
 		if(substr($lastmessage, 0, 3) != '220') {
 			$this->resultLog($this->email_server.':'.$this->email_port.$lastmessage);
+            echo 2;
 			return false;
 		}
 
@@ -96,6 +98,7 @@ final class Email{
 		   $lastmessage = fgets($fp, 512);
 		   if(substr($lastmessage, 0, 3) != 250) {
 				$this->resultLog($this->email_server.':'.$this->email_port." HELO/EHLO - $lastmessage");
+               echo 3;
 				return false;
 		   }
 		}
@@ -110,6 +113,7 @@ final class Email{
 		$lastmessage = fgets($fp, 512);
 		if(substr($lastmessage, 0, 3) != 334) {
 			$this->resultLog($this->email_server.':'.$this->email_port." AUTH LOGIN - $lastmessage");
+            echo 4;
 			return false;
 		}
 
@@ -117,6 +121,7 @@ final class Email{
 		$lastmessage = fgets($fp, 512);
 		if(substr($lastmessage, 0, 3) != 334) {
 			$this->resultLog($this->email_server.':'.$this->email_port." USERNAME - $lastmessage");
+            echo 5;
 			return false;
 		}
 
@@ -124,6 +129,7 @@ final class Email{
 		$lastmessage = fgets($fp, 512);
 		if(substr($lastmessage, 0, 3) != 235) {
 			$this->resultLog($this->email_server.':'.$this->email_port." PASSWORD - $lastmessage");
+            echo 6;
 			return false;
 		}
 
@@ -134,6 +140,7 @@ final class Email{
 			$lastmessage = fgets($fp, 512);
 			if(substr($lastmessage, 0, 3) != 250) {
 				$this->resultLog($this->email_server.':'.$this->email_port." MAIL FROM - $lastmessage");
+                echo 7;
 				return false;
 			}
 		}
@@ -144,6 +151,7 @@ final class Email{
 			fputs($fp, "RCPT TO: <".preg_replace("/.*\<(.+?)\>.*/", "\\1", $email_to).">\r\n");
 			$lastmessage = fgets($fp, 512);
 			$this->resultLog($this->email_server.':'.$this->email_port." RCPT TO - $lastmessage");
+            echo 8;
 			return false;
 		}
 
@@ -151,6 +159,7 @@ final class Email{
 		$lastmessage = fgets($fp, 512);
 		if(substr($lastmessage, 0, 3) != 354) {
 			$this->resultLog($this->email_server.':'.$this->email_port." DATA - $lastmessage");
+            echo 9;
 			return false;
 		}
 
