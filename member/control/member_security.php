@@ -155,9 +155,8 @@ class member_securityControl extends BaseMemberControl {
             }
 
             //liuxuexin start
-            //实名认证限制，必须绑定邮箱、手机并设置支付密码
-             if (in_array($_GET['type'],array('realname')) && ($member_info['member_email_bind'] == '0' ||
-                $member_info['member_mobile_bind'] == '0' || $member_info['member_paypwd'] == '')) {
+            //实名认证限制，必须绑定邮箱、手机并设置支付密码$member_info['member_email_bind'] == '0' ||
+             if (in_array($_GET['type'],array('realname')) && ($member_info['member_mobile_bind'] == '0' || $member_info['member_paypwd'] == '')) {
                 showMessage('请先绑定邮箱、手机并设置支付密码','index.php?app=member_security&feiwa=index','html','error');
             }
             //第一次实名认证，不用发验证码，直接进下一步
