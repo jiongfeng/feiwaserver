@@ -24,17 +24,11 @@ class member_securityControl extends BaseMemberControl {
      * 安全列表
      */
     public function indexFeiWa() {
-        echo "test1";
         self::profile_menu('index','index');
-        echo "test2";
         $member_info = $this->member_info;
-        echo "test3";
         $member_info['security_level'] = Model('member')->getMemberSecurityLevel($member_info);
-        echo "test4";
         Tpl::output('member_info',$member_info);
-        echo "test5";
         Tpl::showpage('member_security.index');
-        echo "test6";
     }
 
       /**
@@ -101,6 +95,7 @@ class member_securityControl extends BaseMemberControl {
         $model_member = Model('member');
 
         if (chksubmit(false,true)) {
+            echo "if";
             //liuxuexin start
             if (!in_array($_POST['type'],array('modify_pwd','modify_mobile','modify_email','modify_paypwd','pd_cash','realname'))) {
             //liuxuexin end
@@ -131,6 +126,7 @@ class member_securityControl extends BaseMemberControl {
             }
 
         } else {
+            echo "else";
             //liuxuexin start
             if (!in_array($_GET['type'],array('modify_pwd','modify_mobile','modify_email','modify_paypwd','pd_cash','realname'))) {
             //liuxuexin end
