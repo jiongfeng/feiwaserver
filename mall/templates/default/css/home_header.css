@@ -23,7 +23,7 @@
 .public-head-layout .logo-test{font-family:"microsoft yahei";font-size:16px}
 .head-search-layout{width:440px;float:left;margin:25px 0 0 50px}
 .head-search-bar{width:100%;height:40px;display:block;position:relative;z-index:100}
-.head-search-bar .search-form{background-color:#a51a74;height:36px;padding:2px}
+.head-search-bar .search-form{background-color:#a51a74 !important;height:36px;padding:2px}
 .head-search-bar .input-text{line-height:24px;color:#555;width:66%;height:24px;float:left;padding:6px 1% 6px 75px;border:none 0}
 .head-search-bar .input-submit,.head-search-bar .input-submit:hover{font-size:14px;color:#FFF;font-weight:600;background-color:transparent;width:15%;height:40px;float:right;border:none;cursor:pointer}
 .head-search-bar .search-tip{font-size:0;word-spacing:-1em;background-color:#FFF;display:none;min-height:100px;padding-bottom:10px;border:solid 1px #D7D7D7;position:absolute;z-index:1;top:40px;left:0;right:72px}
