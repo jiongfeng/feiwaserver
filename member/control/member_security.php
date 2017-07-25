@@ -29,6 +29,7 @@ class member_securityControl extends BaseMemberControl {
         $member_info['security_level'] = Model('member')->getMemberSecurityLevel($member_info);
         Tpl::output('member_info',$member_info);
         Tpl::showpage('member_security.index');
+        echo 123;
     }
 
       /**
