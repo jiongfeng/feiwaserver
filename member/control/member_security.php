@@ -31,7 +31,7 @@ class member_securityControl extends BaseMemberControl {
         Tpl::showpage('member_security.index');
     }
 
-      /**
+    /**
      * 绑定邮箱 - 发送邮件
      */
     public function send_bind_emailFeiWa() {
@@ -81,8 +81,8 @@ class member_securityControl extends BaseMemberControl {
         $message	= ncReplaceText($tpl_info['content'],$param);
 
         $email	= new Email();
-	    $result	= $email->send_sys_email($_POST["email"],$subject,$message);
-	    showDialog('验证邮件已经发送至您的邮箱，请于24小时内登录邮箱并完成验证！','index.php?app=member_security&feiwa=index','succ','',5);
+        $result	= $email->send_sys_email($_POST["email"],$subject,$message);
+        showDialog('验证邮件已经发送至您的邮箱，请于24小时内登录邮箱并完成验证！','index.php?app=member_security&feiwa=index','succ','',5);
 
     }
 
@@ -97,7 +97,7 @@ class member_securityControl extends BaseMemberControl {
         if (chksubmit(false,true)) {
             //liuxuexin start
             if (!in_array($_POST['type'],array('modify_pwd','modify_mobile','modify_email','modify_paypwd','pd_cash','realname'))) {
-            //liuxuexin end
+                //liuxuexin end
                 redirect('index.php?app=member_security&feiwa=index');
             }
             $member_common_info = $model_member->getMemberCommonInfo(array('member_id'=>$_SESSION['member_id']));
@@ -127,7 +127,7 @@ class member_securityControl extends BaseMemberControl {
         } else {
             //liuxuexin start
             if (!in_array($_GET['type'],array('modify_pwd','modify_mobile','modify_email','modify_paypwd','pd_cash','realname'))) {
-            //liuxuexin end
+                //liuxuexin end
                 redirect('index.php?app=member_security&feiwa=index');
             }
 
@@ -142,7 +142,7 @@ class member_securityControl extends BaseMemberControl {
             //第一次绑定邮箱，不用发验证码，直接进下一步
             //第一次绑定手机，不用发验证码，直接进下一步
             if (($_GET['type'] == 'modify_email' && $member_info['member_email_bind'] == '0') ||
-            ($_GET['type'] == 'modify_mobile' && $member_info['member_mobile_bind'] == '0')) {
+                ($_GET['type'] == 'modify_mobile' && $member_info['member_mobile_bind'] == '0')) {
                 $_SESSION['auth_'.$_GET['type']] = TIMESTAMP;
                 Tpl::showpage('member_security.'.$_GET['type']);
                 exit;
@@ -150,13 +150,13 @@ class member_securityControl extends BaseMemberControl {
 
             //修改密码、设置支付密码时，必须绑定邮箱或手机
             if (in_array($_GET['type'],array('modify_pwd','modify_paypwd')) && $member_info['member_email_bind'] == '0' &&
-            $member_info['member_mobile_bind'] == '0') {
+                $member_info['member_mobile_bind'] == '0') {
                 showMessage('请先绑定邮箱或手机','index.php?app=member_security&feiwa=index','html','error');
             }
 
             //liuxuexin start
-            //实名认证限制，必须绑定邮箱、手机并设置支付密码$member_info['member_email_bind'] == '0' ||
-             if (in_array($_GET['type'],array('realname')) && ($member_info['member_mobile_bind'] == '0' || $member_info['member_paypwd'] == '')) {
+            //实名认证限制，必须绑定邮箱、手机并设置支付密码
+            if (in_array($_GET['type'],array('realname')) && ($member_info['member_mobile_bind'] == '0' || $member_info['member_paypwd'] == '')) {
                 showMessage('请先绑定邮箱、手机并设置支付密码','index.php?app=member_security&feiwa=index','html','error');
             }
             //第一次实名认证，不用发验证码，直接进下一步
@@ -172,6 +172,7 @@ class member_securityControl extends BaseMemberControl {
             }elseif(in_array($_GET['type'],array('pd_cash')) && $member_info['real_timeend'] < time()){
                 showMessage('实名认证已过期，请重新认证！','index.php?app=member_security&feiwa=index','html','error');
             }
+
             //liuxuexin end
 
             Tpl::output('member_info',$member_info);
@@ -217,7 +218,7 @@ class member_securityControl extends BaseMemberControl {
         $param['site_name'] = C('site_name');
         $subject = ncReplaceText($tpl_info['title'],$param);
         $message = ncReplaceText($tpl_info['content'],$param);
-       if ($_GET['type'] == 'email') {
+        if ($_GET['type'] == 'email') {
             $email	= new Email();
             $result	= $email->send_sys_email($member_info["member_email"],$subject,$message);
         } elseif ($_GET['type'] == 'mobile') {
@@ -283,8 +284,8 @@ class member_securityControl extends BaseMemberControl {
 
         $obj_validate = new Validate();
         $obj_validate->validateparam = array(
-                array("input"=>$_POST["password"],      "require"=>"true",      "message"=>'请正确输入密码'),
-                array("input"=>$_POST["confirm_password"],  "require"=>"true",      "validator"=>"Compare","operator"=>"==","to"=>$_POST["password"],"message"=>'两次密码输入不一致'),
+            array("input"=>$_POST["password"],      "require"=>"true",      "message"=>'请正确输入密码'),
+            array("input"=>$_POST["confirm_password"],  "require"=>"true",      "validator"=>"Compare","operator"=>"==","to"=>$_POST["password"],"message"=>'两次密码输入不一致'),
         );
         $error = $obj_validate->validate();
         if ($error != ''){
@@ -302,19 +303,19 @@ class member_securityControl extends BaseMemberControl {
      */
     public function modify_realnameFeiWa() {
         $model_member = Model('member');
-        
+
         $obj_validate = new Validate();
         $obj_validate->validateparam = array(
-                array("input"=>$_POST["real_name"],      "require"=>"true",      "message"=>'请正确输入真实姓名'),
-                array("input"=>$_POST["real_cardnumber"],      "require"=>"true",      "message"=>'请正确输入身份证号'),
-                array("input"=>$_POST["real_birthday"],      "require"=>"true",      "message"=>'请正确输入出生日期'),
-                array("input"=>$_POST["real_sex"],      "require"=>"true",      "message"=>'请选择性别'),
-                array("input"=>$_POST["real_minzu"],      "require"=>"true",      "message"=>'请正确输入民族'),
-                array("input"=>$_POST["real_address"],      "require"=>"true",      "message"=>'请正确输入证件住址'),
-                array("input"=>$_POST["real_jiguan"],      "require"=>"true",      "message"=>'请正确输入发证机关'),
-                array("input"=>$_POST["real_timestart"],      "require"=>"true",      "message"=>'请正确输入身份证有效期'),
-                array("input"=>$_POST["real_timeend"],      "require"=>"true",      "message"=>'请正确输入身份证有效期'),
-                
+            array("input"=>$_POST["real_name"],      "require"=>"true",      "message"=>'请正确输入真实姓名'),
+            array("input"=>$_POST["real_cardnumber"],      "require"=>"true",      "message"=>'请正确输入身份证号'),
+            array("input"=>$_POST["real_birthday"],      "require"=>"true",      "message"=>'请正确输入出生日期'),
+            array("input"=>$_POST["real_sex"],      "require"=>"true",      "message"=>'请选择性别'),
+            array("input"=>$_POST["real_minzu"],      "require"=>"true",      "message"=>'请正确输入民族'),
+            array("input"=>$_POST["real_address"],      "require"=>"true",      "message"=>'请正确输入证件住址'),
+            array("input"=>$_POST["real_jiguan"],      "require"=>"true",      "message"=>'请正确输入发证机关'),
+            array("input"=>$_POST["real_timestart"],      "require"=>"true",      "message"=>'请正确输入身份证有效期'),
+            array("input"=>$_POST["real_timeend"],      "require"=>"true",      "message"=>'请正确输入身份证有效期'),
+
         );
         $error = $obj_validate->validate();
         if ($error != ''){
@@ -324,7 +325,7 @@ class member_securityControl extends BaseMemberControl {
         if($user['member_id']!="" && $user['member_id']!=$_SESSION['member_id']){
             showValidateError("该身份证号已经存在");
         }
-        
+
         $param = array(
             'real_check' => '2',
             'real_name' => $_POST["real_name"],
@@ -437,7 +438,7 @@ class member_securityControl extends BaseMemberControl {
             if (date('Ymd',$member_common_info['send_mb_time']) != date('Ymd',TIMESTAMP)) {
                 $data = array();
                 $data['send_mb_times'] = 0;
-                $update = $model_member->editMemberCommon($data,array('member_id'=>$_SESSION['member_id']));               
+                $update = $model_member->editMemberCommon($data,array('member_id'=>$_SESSION['member_id']));
             } else {
                 if (TIMESTAMP - $member_common_info['send_mb_time'] < 58) {
                     exit(json_encode(array('state'=>'false','msg'=>'请60秒以后再次发送短信')));
@@ -445,7 +446,7 @@ class member_securityControl extends BaseMemberControl {
                     if ($member_common_info['send_mb_times'] >= 15) {
                         exit(json_encode(array('state'=>'false','msg'=>'您今天发送短信已超过15条，今天将无法再次发送')));
                     }
-                }                
+                }
             }
         }
 
@@ -503,47 +504,47 @@ class member_securityControl extends BaseMemberControl {
         switch ($menu_type) {
             case 'index':
                 $menu_array = array(
-                array('menu_key'=>'index', 'menu_name'=>'账户安全','menu_url'=>'index.php?app=member_security&feiwa=index'),
+                    array('menu_key'=>'index', 'menu_name'=>'账户安全','menu_url'=>'index.php?app=member_security&feiwa=index'),
                 );
                 break;
             case 'modify_pwd':
                 $menu_array = array(
-                array('menu_key'=>'index', 'menu_name'=>'账户安全','menu_url'=>'index.php?app=member_security&feiwa=index'),
-                array('menu_key'=>'modify_pwd','menu_name'=>'修改登录密码','menu_url'=>'index.php?app=member_security&feiwa=auth&type=modify_pwd'),
+                    array('menu_key'=>'index', 'menu_name'=>'账户安全','menu_url'=>'index.php?app=member_security&feiwa=index'),
+                    array('menu_key'=>'modify_pwd','menu_name'=>'修改登录密码','menu_url'=>'index.php?app=member_security&feiwa=auth&type=modify_pwd'),
                 );
                 break;
             case 'modify_email':
                 $menu_array = array(
-                array('menu_key'=>'index', 'menu_name'=>'账户安全','menu_url'=>'index.php?app=member_security&feiwa=index'),
-                array('menu_key'=>'modify_email', 'menu_name'=>'邮箱验证','menu_url'=>'index.php?app=member_security&feiwa=auth&type=modify_email'),
+                    array('menu_key'=>'index', 'menu_name'=>'账户安全','menu_url'=>'index.php?app=member_security&feiwa=index'),
+                    array('menu_key'=>'modify_email', 'menu_name'=>'邮箱验证','menu_url'=>'index.php?app=member_security&feiwa=auth&type=modify_email'),
                 );
                 break;
             case 'modify_mobile':
                 $menu_array = array(
-                array('menu_key'=>'index', 'menu_name'=>'账户安全','menu_url'=>'index.php?app=member_security&feiwa=index'),
-                array('menu_key'=>'modify_mobile','menu_name'=>'手机验证','menu_url'=>'index.php?app=member_security&feiwa=auth&type=modify_mobile'),
+                    array('menu_key'=>'index', 'menu_name'=>'账户安全','menu_url'=>'index.php?app=member_security&feiwa=index'),
+                    array('menu_key'=>'modify_mobile','menu_name'=>'手机验证','menu_url'=>'index.php?app=member_security&feiwa=auth&type=modify_mobile'),
                 );
                 break;
             case 'modify_paypwd':
                 $menu_array = array(
-                array('menu_key'=>'index', 'menu_name'=>'账户安全','menu_url'=>'index.php?app=member_security&feiwa=index'),
-                array('menu_key'=>'modify_paypwd','menu_name'=>'设置支付密码','menu_url'=>'index.php?app=member_security&feiwa=auth&type=modify_paypwd'),
+                    array('menu_key'=>'index', 'menu_name'=>'账户安全','menu_url'=>'index.php?app=member_security&feiwa=index'),
+                    array('menu_key'=>'modify_paypwd','menu_name'=>'设置支付密码','menu_url'=>'index.php?app=member_security&feiwa=auth&type=modify_paypwd'),
                 );
                 break;
             //liuxuexin start
             case 'realname':
                 $menu_array = array(
-                array('menu_key'=>'index', 'menu_name'=>'账户安全','menu_url'=>'index.php?app=member_security&feiwa=index'),
-                array('menu_key'=>'realname','menu_name'=>'实名认证','menu_url'=>'index.php?app=member_security&feiwa=auth&type=realname'),
+                    array('menu_key'=>'index', 'menu_name'=>'账户安全','menu_url'=>'index.php?app=member_security&feiwa=index'),
+                    array('menu_key'=>'realname','menu_name'=>'实名认证','menu_url'=>'index.php?app=member_security&feiwa=auth&type=realname'),
                 );
                 break;
             //liuxuexin end
             case 'pd_cash':
                 $menu_array = array(
-                array('menu_key'=>'loglist','menu_name'=>'账户余额',    'menu_url'=>'index.php?app=predeposit&feiwa=pd_log_list'),
-                array('menu_key'=>'recharge_list','menu_name'=>'充值明细', 'menu_url'=>'index.php?app=predeposit&feiwa=index'),
-                array('menu_key'=>'cashlist','menu_name'=>'余额提现', 'menu_url'=>'index.php?app=predeposit&feiwa=pd_cash_list'),
-                array('menu_key'=>'pd_cash','menu_name'=>'提现申请','menu_url'=>'index.php?app=member_security&feiwa=auth&type=pd_cash'),
+                    array('menu_key'=>'loglist','menu_name'=>'账户余额',    'menu_url'=>'index.php?app=predeposit&feiwa=pd_log_list'),
+                    array('menu_key'=>'recharge_list','menu_name'=>'充值明细', 'menu_url'=>'index.php?app=predeposit&feiwa=index'),
+                    array('menu_key'=>'cashlist','menu_name'=>'余额提现', 'menu_url'=>'index.php?app=predeposit&feiwa=pd_cash_list'),
+                    array('menu_key'=>'pd_cash','menu_name'=>'提现申请','menu_url'=>'index.php?app=member_security&feiwa=auth&type=pd_cash'),
                 );
                 break;
         }
