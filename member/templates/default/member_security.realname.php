@@ -1,7 +1,4 @@
-<?php
-echo "test1";
-defined('ByFeiWa') or exit('Access Invalid!');
-echo "test2";?>
+<?php defined('ByFeiWa') or exit('Access Invalid!');?>
 <link rel="stylesheet" type="text/css" href="<?php echo RESOURCE_SITE_URL;?>/js/jquery-ui/themes/ui-lightness/jquery.ui.css"  />
 <div class="wrap">
   <div class="tabmenu">
