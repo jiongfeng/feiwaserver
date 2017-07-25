@@ -162,7 +162,9 @@ class member_securityControl extends BaseMemberControl {
             //第一次实名认证，不用发验证码，直接进下一步
             if (($_GET['type'] == 'realname' && $member_info['real_check'] == '0')) {
                 $_SESSION['auth_'.$_GET['type']] = TIMESTAMP;
+                echo "test1";
                 Tpl::showpage('member_security.'.$_GET['type']);
+                echo "test2";
                 exit;
             }
 
