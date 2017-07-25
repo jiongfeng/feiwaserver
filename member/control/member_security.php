@@ -163,7 +163,7 @@ class member_securityControl extends BaseMemberControl {
             if (($_GET['type'] == 'realname' && $member_info['real_check'] == '0')) {
                 $_SESSION['auth_'.$_GET['type']] = TIMESTAMP;
                 echo "test1";
-                echo 'member_security.'.$_GET['type'];
+                var_dump($_GET['type']);
                 Tpl::showpage('member_security.'.$_GET['type']);
                 echo "test2";
                 exit;
