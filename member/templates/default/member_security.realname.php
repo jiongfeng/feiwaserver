@@ -81,7 +81,7 @@
         <dd>
         <?php if($output['member_info']['real_card_zheng']!=""){ ?>
         	<img src="/data/upload/member/realname/<?php echo $output['member_info']['real_card_zheng']?>" style="max-width:200px;max-height:200px;"><br>
-        <? } ?>
+        <?php } ?>
         <?php if($output['member_info']['real_check']!=1){ ?>
           <input type="file" name="real_cardzheng"/>
           <label class="error">请确保图片清晰，身份证上文字可辨（清晰照片也可使用）。</label>
@@ -94,7 +94,7 @@
         <dd>
         <?php if($output['member_info']['real_card_fan']!=""){ ?>
         	<img src="/data/upload/member/realname/<?php echo $output['member_info']['real_card_fan']?>" style="max-width:200px;max-height:200px;"><br>
-        <? } ?>
+        <?php } ?>
         <?php if($output['member_info']['real_check']!=1){ ?>
           <input type="file" name="real_cardfan"/>
           <label class="error">请确保图片清晰，身份证上文字可辨（清晰照片也可使用）。</label>
@@ -107,7 +107,7 @@
         <dd>
         <?php if($output['member_info']['real_card_shou']!=""){ ?>
         	<img src="/data/upload/member/realname/<?php echo $output['member_info']['real_card_shou']?>" style="max-width:200px;max-height:200px;"><br>
-        <? } ?>
+        <?php } ?>
         <?php if($output['member_info']['real_check']!=1){ ?>
           <input type="file" name="real_cardshou"/>
           <label for="real_cardshou" generated="true" class="error"></label>
@@ -134,7 +134,7 @@
   </div>
 </div>
 <?php if($output['member_info']['real_check']!=0){ ?>
-<script type="text/javascript">
+<script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/GB2260.js" charset="utf-8"></script>
 $(document).ready(function(){
     $("input").attr("disabled",true); 
 });
@@ -259,7 +259,6 @@ $(function(){
             real_cardshou : {
                 required : '<i class="icon-exclamation-sign"></i>请上传手持身份证'
             }
-
         }
     });
 });
